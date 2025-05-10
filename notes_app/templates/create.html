@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content%}
+<div>
+    <h1>New Note</h1>
+    <form method="POST">  
+        <!---action is not necessary if you are using generic views 
+        the data will be sent to the current url if action tag not mentioned and if you want to send data 
+        to some other url you can add action tag
+        -->
+        {% csrf_token %}
+        <table>{{form.as_p}}</table>
+        
+        <button type="submit">Save</button>
+        
+    </form>
+</div>
+{%endblock%}

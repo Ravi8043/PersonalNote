@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Personal Note</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="{%url 'list_view'%}">Personal Note</a></h1>
+            <h2><a href="{% url 'create_view'%}">+Create Note</a></h2>
+        </div>
+        {%block content%}
+        {%endblock%}
+    </body>
+</html>
